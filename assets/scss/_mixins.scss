@@ -1,0 +1,15 @@
+@mixin text-main($size, $weigth: normal, $style: normal) {
+    font-family: $font-family-main;
+    font-size: $size;
+    font-weight: $weigth;
+    font-style: $style;
+    color: $font-color-main;
+}
+
+@mixin text-alt($size, $weigth: normal, $style: normal) {
+    font-family: $font-family-alt;
+    font-size: $size;
+    font-weight: $weigth;
+    font-style: $style;
+    color: $font-color-main;
+}

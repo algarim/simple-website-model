@@ -1,0 +1,46 @@
+.hero-image {
+    height: calc(100vh - $navbar-height);
+    position: relative;
+
+    background-image: url("../img/hero-image.jpg");
+    background-size: cover;
+    background-position: 20% 50%;
+
+    .hero-image-text {
+        h2 {
+            @include text-alt(4rem, 500, italic);
+            color: $hero-image-text-color;
+            text-shadow: 0 0 5px black;
+        }
+
+        position: absolute;
+        top: 25%;
+        right: 20%;
+    }
+}
+
+@media(max-width: 992px) {
+    .hero-image {
+        .hero-image-text {
+            h2 {
+                font-size: 3rem;
+            }
+
+            top: 90px;
+            right: 8%;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .hero-image {
+        .hero-image-text {
+            h2 {
+                font-size: 2.7rem;
+            }
+
+            width: 210px;
+            right: 10px;
+        }
+    }
+}
