@@ -1,0 +1,59 @@
+#services {
+    background-color: white;
+
+    h3 {
+        @include text-main(1.1rem)
+    }
+
+    @include text-color(black);
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    gap: 15px;
+}
+
+.services-item {
+    min-width: 300px;
+    max-width: 400px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.service-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    i {
+        background-color: black;
+        padding: 6px;
+
+        &:hover {
+            background-color: rgb(201, 200, 200);
+            color: black;
+        }
+    }
+}
+
+.service-description {
+    max-height: 0;
+    padding-right: 40px;
+    padding-top: 15px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.service-description.active {
+    padding: 15px 40px 10px 0;
+    max-height: 200px;
+}

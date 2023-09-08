@@ -27,6 +27,10 @@ h2 {
     @include text-main(2rem)
 }
 
+h3 {
+    @include text-main(1.2rem)
+}
+
 .section-title {
     margin-bottom: 15px
 }

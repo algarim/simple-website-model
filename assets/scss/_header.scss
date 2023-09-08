@@ -3,6 +3,7 @@ header {
 
     a {
         color: $navbar-link-color;
+        @include text-main(1rem)
     }
 
     position: sticky;
@@ -31,7 +32,7 @@ header {
 }
 
 .nav-branding {
-    font-size: 2rem;
+    @include text-alt(2rem, bold)
 }
 
 .nav-link {

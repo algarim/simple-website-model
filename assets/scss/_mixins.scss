@@ -13,3 +13,17 @@
     font-style: $style;
     color: $font-color-main;
 }
+
+@mixin text-color($color) {
+    p {
+        color: $color;
+    };
+
+    h2 {
+        color: $color;
+    }
+
+    h3 {
+        color: $color;
+    }
+}
