@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website Model</title>
+
+    <!-- ICONS -->
+    <script src="https://kit.fontawesome.com/e2a6947e79.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Simple Website Model</title>
+
 </head>
 
 <body>
@@ -45,22 +50,77 @@
             </div>
         </div>
 
-        <section id="about">
-            <h2> About </h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam autem, molestiae non consectetur iste dolorem sapiente minima, unde nesciunt necessitatibus optio sunt fugiat repellendus error at ullam quos voluptas dignissimos. </p>
+        <section id="services" class="section-padding">
+            <h2 class="section-title"> Services </h2>
+
+            <ul class="services-list">
+                <li> Service 1 </li>
+                <li> Service 2 </li>
+                <li> Service 3 </li>
+                <li> Service 4 </li>
+            </ul>
         </section>
 
-        <section id="contact">
-            <h2> Contact </h2>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sed atque alias magni placeat minus et fugit culpa dolores perferendis quibusdam deleniti illo tempora aliquam qui aspernatur, pariatur quae dolorum. </p>
+        <section id="about" class="section-padding">
+            <div class="about-img">
+                <img src="assets/img/about3.jpeg" alt="About us">
+            </div>
+            
+            <div class="about-text">
+                <h2 class="section-title"> About </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti veritatis quae iure consequuntur quo, quasi maiores ex? Quis voluptatem adipisci, soluta aspernatur hic quaerat facilis? Eaque aspernatur officia, veritatis expedita nulla veniam? Quis numquam in temporibus eum neque! Expedita consequuntur impedit quos labore consequatur sed modi? Harum nam suscipit, quidem culpa ipsum nobis. Eligendi distinctio quos laborum, ducimus aliquam voluptate soluta at optio minima earum. Possimus, repellat doloremque et perspiciatis velit consequatur animi sit tempore. Libero sint dignissimos atque obcaecati. Hic in aut sit molestiae consectetur sed possimus debitis recusandae dignissimos cum eveniet fugiat, illo est error earum magnam velit. </p>
+            </div>
+        </section>
+
+        <section id="team" class="section-padding">
+            <h2 class="section-title"> Our Team </h2>
+            <div class="team-cards">
+
+            </div>
+        </section>
+
+        <section id="contact" class="section-padding">
+            <div class="contact-info">
+                <h2 class="section-title"> Contact </h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sed atque alias magni placeat minus et
+                    fugit
+                    culpa dolores perferendis quibusdam deleniti illo tempora aliquam qui aspernatur, pariatur quae
+                    dolorum.
+                </p>
+            </div>
+
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="phone" placeholder="Phone number">
+                <textarea name="message" rows="10" placeholder="Leave your message"></textarea>
+
+                <div class="form-buttons">
+                    <button type="submit"> Send </button>
+                    <button type="reset"> Clear form</button>
+                </div>
+            </form>
         </section>
     </main>
 
     <footer>
+        <div class="footer-icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
 
+        <p class="copyright">
+            <a target='_blank' href="https://www.linkedin.com/in/alvaro-garimberti/" className='footer-link mx-1'>
+                Alvaro Garimberti
+            </a>
+
+            &copy; 2023 - Todos los derechos reservados
+        </p>
     </footer>
 
 
+    <!-- JS -->
     <script src="assets/js/main.js"></script>
 </body>
 

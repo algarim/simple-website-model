@@ -1,0 +1,29 @@
+footer {
+    padding: 50px;
+
+    border-top: 1px solid white;
+
+    a:hover {
+        color: rgb(187, 208, 255);
+    }
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 250px;
+    margin: auto;
+
+    i{
+        color: $footer-icons-color;
+        font-size: 40px;
+    }
+}
+
+.copyright {
+    margin: auto;
+    text-align: center;
+    padding-top: 25px;
+}

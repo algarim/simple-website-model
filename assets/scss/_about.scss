@@ -1,0 +1,44 @@
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background-color: rgb(255, 174, 145);
+
+    p{
+        color: black;
+    }
+
+    h2 {
+        color: black;
+    }
+}
+
+.about-img {
+    flex: 1;
+    margin: -50px 0 -50px -6%;
+    min-width: 560px;
+    max-width: 720px;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.about-text {
+    flex: 1;
+}
+
+@media(max-width: 1200px) {
+    #about {
+        flex-direction: column;
+    }
+
+    .about-img {
+        order: 3;
+        min-width: none;
+        max-width: none;
+        margin: 0;
+    }
+}
