@@ -18,7 +18,7 @@
             @include text-main(1rem);
         }
 
-        textarea{
+        textarea {
             padding: 8px 10px;
             @include text-main(1rem);
             margin-bottom: 10px;
@@ -35,4 +35,26 @@
 
 .contact-info {
     flex: 1;
+}
+
+
+@media(max-width: 768px) {
+    #contact {
+        display: block;
+
+        h2 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            max-width: 580px;
+
+            margin: auto;
+            margin-top: 32px;
+        }
+    }
 }

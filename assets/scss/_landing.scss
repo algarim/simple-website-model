@@ -1,21 +1,34 @@
 .hero-image {
     height: calc(100vh - $navbar-height);
-    position: relative;
+    // position: relative;
 
     background-image: url("../img/hero-image.jpg");
     background-size: cover;
     background-position: 20% 50%;
 
     .hero-image-text {
+        height: calc(100vh - $navbar-height);
+        max-width: $site-max-width;
+        margin: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        padding: 0 5%;
+
         h2 {
             @include text-alt(4rem, 500, italic);
             color: $hero-image-text-color;
             text-shadow: 0 0 5px black;
+
+            text-align: right;
         }
 
-        position: absolute;
-        top: 25%;
-        right: 20%;
+        // position: absolute;
+        // top: 25%;
+        // right: 20%;
     }
 }
 
@@ -25,9 +38,6 @@
             h2 {
                 font-size: 3rem;
             }
-
-            top: 90px;
-            right: 8%;
         }
     }
 }
@@ -38,9 +48,6 @@
             h2 {
                 font-size: 2.7rem;
             }
-
-            width: 210px;
-            right: 10px;
         }
     }
 }

@@ -11,7 +11,7 @@ body {
 }
 
 .section-padding {
-  padding: 50px 5%;
+  padding: 75px 10%;
 }
 
 li {
@@ -79,13 +79,12 @@ header a {
 }
 
 .navbar {
-  max-width: 1000px;
   margin: 0 auto;
-  min-height: 70px;
+  min-height: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 10%;
 }
 
 .nav-menu {
@@ -105,10 +104,12 @@ header a {
 }
 
 .nav-link {
-  transition: 0.3s ease;
+  padding: 15px 10px;
+  transition: color 0.3s ease, border-bottom 0s;
 }
 .nav-link:hover {
   color: dodgerblue;
+  border-bottom: 2px solid dodgerblue;
 }
 
 .hamburger {
@@ -126,7 +127,7 @@ header a {
   background-color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .hamburger {
     display: block;
   }
@@ -141,33 +142,40 @@ header a {
   }
   .nav-menu {
     position: fixed;
-    left: -100%;
-    top: 70px;
+    left: 0;
+    top: 85px;
+    max-height: 0;
+    overflow: hidden;
     gap: 0;
     flex-direction: column;
     background-color: black;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.4s ease;
   }
   .nav-menu.active {
-    left: 0;
+    max-height: 100vh;
+    padding: 15px 0;
   }
   .nav-item {
     margin: 16px 0;
   }
 }
 .hero-image {
-  height: calc(100vh - 70px);
-  position: relative;
+  height: calc(100vh - 85px);
   background-image: url("../img/hero-image.jpg");
   background-size: cover;
   background-position: 20% 50%;
 }
 .hero-image .hero-image-text {
-  position: absolute;
-  top: 25%;
-  right: 20%;
+  height: calc(100vh - 85px);
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 5%;
 }
 .hero-image .hero-image-text h2 {
   font-family: "EB Garamond", serif;
@@ -177,22 +185,15 @@ header a {
   color: white;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 0 5px black;
+  text-align: right;
 }
 
 @media (max-width: 992px) {
-  .hero-image .hero-image-text {
-    top: 90px;
-    right: 8%;
-  }
   .hero-image .hero-image-text h2 {
     font-size: 3rem;
   }
 }
 @media (max-width: 576px) {
-  .hero-image .hero-image-text {
-    width: 210px;
-    right: 10px;
-  }
   .hero-image .hero-image-text h2 {
     font-size: 2.7rem;
   }
@@ -226,7 +227,7 @@ header a {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  gap: 15px;
+  gap: 35px;
 }
 
 .services-item {
@@ -266,7 +267,8 @@ header a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
+  padding: 0 10%;
   background-color: rgb(255, 174, 145);
 }
 #about p {
@@ -277,10 +279,7 @@ header a {
 }
 
 .about-img {
-  flex: 1;
-  margin: -50px 0 -50px -6%;
   min-width: 560px;
-  max-width: 720px;
 }
 .about-img img {
   width: 100%;
@@ -288,17 +287,25 @@ header a {
 }
 
 .about-text {
-  flex: 1;
+  margin: auto;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   #about {
     flex-direction: column;
+    padding: 75px 0;
+  }
+  #about h2 {
+    text-align: center;
+  }
+  .about-text {
+    padding: 0 10%;
   }
   .about-img {
+    flex: 1;
     order: 3;
-    min-width: none;
-    max-width: none;
+    min-width: 0px;
+    max-width: 750px;
     margin: 0;
   }
 }
@@ -323,14 +330,12 @@ header a {
   border: 1px gainsboro solid;
   border-radius: 8px;
   background-color: aliceblue;
-  max-width: 275px;
-  height: 420px;
   display: flex;
   flex-direction: column;
 }
 .team-card img {
   border-radius: 8px 8px 0 0;
-  height: 360px;
+  max-height: 520px;
   object-fit: cover;
 }
 
@@ -340,11 +345,11 @@ header a {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  padding-top: 5px;
+  padding: 20px;
 }
 .team-card-info h3 {
   font-family: Helvetica;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: normal;
   font-style: normal;
   color: white;
@@ -353,7 +358,7 @@ header a {
 }
 .team-card-info p {
   font-family: Helvetica;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: normal;
   font-style: normal;
   color: white;
@@ -361,6 +366,12 @@ header a {
   color: rgb(189, 99, 99);
 }
 
+@media (max-width: 480px) {
+  .team-card img {
+    max-height: none;
+    max-width: calc(100vw - 10%);
+  }
+}
 #contact {
   display: flex;
   align-items: start;
@@ -402,6 +413,22 @@ header a {
   flex: 1;
 }
 
+@media (max-width: 768px) {
+  #contact {
+    display: block;
+  }
+  #contact h2 {
+    text-align: center;
+  }
+  #contact p {
+    text-align: center;
+  }
+  #contact form {
+    max-width: 580px;
+    margin: auto;
+    margin-top: 32px;
+  }
+}
 footer {
   padding: 50px;
   border-top: 1px solid white;

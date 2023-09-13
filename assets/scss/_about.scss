@@ -2,7 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 40px;
+
+    padding: 0 10%;
 
     background-color: rgb(255, 174, 145);
 
@@ -16,10 +18,7 @@
 }
 
 .about-img {
-    flex: 1;
-    margin: -50px 0 -50px -6%;
     min-width: 560px;
-    max-width: 720px;
     img {
         width: 100%;
         display: block;
@@ -27,18 +26,28 @@
 }
 
 .about-text {
-    flex: 1;
+    margin: auto;
 }
 
-@media(max-width: 1200px) {
+@media(max-width: 1300px) {
     #about {
         flex-direction: column;
+        padding: 75px 0;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .about-text {
+        padding: 0 10%;
     }
 
     .about-img {
+        flex: 1;
         order: 3;
-        min-width: none;
-        max-width: none;
+        min-width: 0px;
+        max-width: 750px;
         margin: 0;
     }
 }

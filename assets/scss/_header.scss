@@ -12,7 +12,6 @@ header {
 }
 
 .navbar {
-    max-width: $navbar-max-width;
     margin: 0 auto;
 
     min-height: $navbar-height;
@@ -20,7 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 24px;
+    padding: 0 10%;
 }
 
 .nav-menu {
@@ -36,10 +35,12 @@ header {
 }
 
 .nav-link {
-    transition: 0.3s ease;
+    padding: 15px 10px;
+    transition: color 0.3s ease, border-bottom 0s;
 
     &:hover {
         color: $navbar-link-hover-color;
+        border-bottom: 2px solid $navbar-link-hover-color;
     }
 }
 
@@ -59,7 +60,7 @@ header {
     background-color: $hamburger-bar-color;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 991px) {
     .hamburger {
         display: block;
     }
@@ -80,19 +81,22 @@ header {
 
     .nav-menu {
         position: fixed;
-        left: -100%;
-        //left: 0;
+        left: 0;
         top: $navbar-height;
+
+        max-height: 0;
+        overflow: hidden;       
+        
         gap: 0;
         flex-direction: column;
         background-color: $navbar-bg-color;
         width: 100%;
         text-align: center;
-        transition: 0.3s;
+        transition: 0.4s ease;
 
         &.active {
-            left: 0;
-            //top: $navbar-height;    
+            max-height: 100vh; 
+            padding: 15px 0;
         }
     }
 

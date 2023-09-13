@@ -20,18 +20,14 @@
     border: 1px gainsboro solid;
     border-radius: 8px;
     background-color: aliceblue;
-    max-width: 275px;
-    height: 420px;
 
     display: flex;
     flex-direction: column;
 
     img {
         border-radius: 8px 8px 0 0;
-        height: 360px;
+        max-height: 520px;
         object-fit: cover;
-
-
     }
 
 }
@@ -44,18 +40,26 @@
     justify-content: center;
     gap: 5px;
 
-    padding-top: 5px;
+    padding: 20px;
 
     h3 {
-        @include text-main(1rem);
+        @include text-main(1.2rem);
         text-align: center;
         color: black
     }
-    
+
     p {
-        @include text-main(0.75rem);
+        @include text-main(0.9rem);
         text-align: center;
         color: rgb(189, 99, 99);
     }
 }
 
+@media(max-width: 480px) {
+    .team-card {
+        img {
+            max-height: none;
+            max-width: calc(100vw - 10%);
+        }
+    }
+}
