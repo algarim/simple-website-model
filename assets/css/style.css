@@ -26,7 +26,7 @@ a {
 
 h2 {
   font-family: Helvetica;
-  font-size: 2rem;
+  font-size: 2.8rem;
   font-weight: normal;
   font-style: normal;
   color: white;
@@ -41,7 +41,12 @@ h3 {
 }
 
 .section-title {
-  margin-bottom: 15px;
+  margin-bottom: 45px;
+}
+
+.underline {
+  padding: 0 15px 10px 15px;
+  border-bottom: 4px solid white;
 }
 
 p {
@@ -217,9 +222,13 @@ header a {
 #services h3 {
   color: black;
 }
+#services .underline {
+  padding: 0 15px 10px 15px;
+  border-bottom: 4px solid black;
+}
 #services h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 55px;
 }
 
 .services-list {
@@ -268,7 +277,7 @@ header a {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  padding: 0 10%;
+  padding: 0;
   background-color: rgb(255, 174, 145);
 }
 #about p {
@@ -276,10 +285,22 @@ header a {
 }
 #about h2 {
   color: black;
+  text-align: center;
+}
+#about h3 {
+  color: black;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-size: 1.4rem;
+  margin: 30px 0 15px 0;
+}
+#about .underline {
+  padding: 0 15px 10px 15px;
+  border-bottom: 4px solid black;
 }
 
 .about-img {
-  min-width: 560px;
+  min-width: 650px;
 }
 .about-img img {
   width: 100%;
@@ -288,6 +309,8 @@ header a {
 
 .about-text {
   margin: auto;
+  padding-right: 10%;
+  padding-left: 5%;
 }
 
 @media (max-width: 1300px) {
@@ -314,7 +337,7 @@ header a {
 }
 #team .section-title {
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   text-align: center;
 }
 
@@ -375,9 +398,9 @@ header a {
 #contact {
   display: flex;
   align-items: start;
-  justify-content: space-between;
   gap: 30px;
   background-color: rgb(168, 0, 0);
+  padding: 75px 10%;
 }
 #contact form {
   flex: 1;
@@ -412,6 +435,36 @@ header a {
 .contact-info {
   flex: 1;
 }
+.contact-info ul {
+  line-height: 2;
+}
+.contact-info li {
+  font-family: Helvetica;
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+}
+.contact-info h3 {
+  font-family: Helvetica;
+  font-size: 1.4rem;
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.contact-info p {
+  display: inline;
+}
+
+.contact-hours {
+  margin-top: 20px;
+}
+.contact-hours ul {
+  margin-top: 5px;
+  margin-left: 40px;
+}
 
 @media (max-width: 768px) {
   #contact {
@@ -427,6 +480,21 @@ header a {
     max-width: 580px;
     margin: auto;
     margin-top: 32px;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info ul {
+    padding: 0;
+    margin-left: 0;
+  }
+  .contact-info h3 {
+    text-align: center;
+  }
+  .contact-hours li {
+    text-align: center;
   }
 }
 footer {

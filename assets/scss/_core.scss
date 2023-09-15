@@ -24,7 +24,7 @@ a {
 }
 
 h2 {
-    @include text-main(2rem)
+    @include text-main(2.8rem);
 }
 
 h3 {
@@ -32,8 +32,10 @@ h3 {
 }
 
 .section-title {
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
+
+@include underline($font-color-main);
 
 p {
     @include text-main(1rem);

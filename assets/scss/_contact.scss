@@ -1,10 +1,11 @@
 #contact {
     display: flex;
     align-items: start;
-    justify-content: space-between;
     gap: 30px;
 
     background-color: rgb(168, 0, 0);
+
+    padding: 75px 10%;
 
     form {
         flex: 1;
@@ -35,7 +36,35 @@
 
 .contact-info {
     flex: 1;
+
+    ul {
+        line-height: 2;
+    }
+
+    li {
+        @include text-main(1rem);
+    }
+
+    h3 {
+        @include text-main(1.4rem);
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+
+    p {
+        display: inline;
+    }
 }
+
+.contact-hours {
+    margin-top: 20px;
+
+    ul {
+        margin-top: 5px;
+        margin-left: 40px ;
+    }
+}
+
 
 
 @media(max-width: 768px) {
@@ -55,6 +84,27 @@
 
             margin: auto;
             margin-top: 32px;
+        }
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ul {
+            padding: 0;
+            margin-left: 0;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    }
+
+    .contact-hours {
+        li {
+            text-align: center;
         }
     }
 }
