@@ -5,9 +5,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   background-color: black;
+  overflow-x: hidden;
 }
 
 .section-padding {
@@ -116,6 +121,11 @@ header a {
 .nav-link:hover {
   color: dodgerblue;
   border-bottom: 2px solid dodgerblue;
+}
+
+.nav-link-active {
+  color: white;
+  border-bottom: 2px solid white;
 }
 
 .hamburger {
@@ -521,6 +531,9 @@ footer a:hover {
 .footer-icons i {
   color: white;
   font-size: 40px;
+}
+.footer-icons a:hover i {
+  color: dodgerblue;
 }
 
 .copyright {

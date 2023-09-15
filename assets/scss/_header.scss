@@ -46,6 +46,11 @@ header {
     }
 }
 
+.nav-link-active {
+    color: $navbar-link-color;
+    border-bottom: 2px solid $navbar-link-color;
+}
+
 .hamburger {
     display: none;
     cursor: pointer;

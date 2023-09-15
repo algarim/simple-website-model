@@ -20,6 +20,10 @@ footer {
         color: $footer-icons-color;
         font-size: 40px;
     }
+
+    a:hover i{
+        color: $navbar-link-hover-color;
+    }
 }
 
 .copyright {
