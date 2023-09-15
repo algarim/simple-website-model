@@ -73,6 +73,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 9;
+  transition: all 0.4s;
 }
 header a {
   color: white;
@@ -330,6 +331,11 @@ header a {
     min-width: 0px;
     max-width: 750px;
     margin: 0;
+  }
+}
+@media (max-width: 479px) {
+  #about h3 {
+    text-align: center;
   }
 }
 #team {

@@ -67,3 +67,11 @@
         margin: 0;
     }
 }
+
+@media(max-width: 479px) {
+    #about {
+        h3 {
+            text-align: center;
+        }
+    }
+}

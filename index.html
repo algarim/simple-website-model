@@ -8,6 +8,10 @@
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2a6947e79.js" crossorigin="anonymous"></script>
 
+    <!-- ANIMATIONS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Simple Website Model</title>
@@ -50,17 +54,17 @@
     <main>
         <div class="hero-image">
             <div class="hero-image-text section-padding">
-                <h2> somos una empresa. </h2>
-                <h2> vendemos un producto. </h2>
+                <h2> we are a company. </h2>
+                <h2> we sell a product. </h2>
             </div>
         </div>
 
         <section id="services" class="section-padding">
-            <h2 class="section-title">
+            <h2 class="section-title"  data-aos="fade-down">
                 <span class="underline"> Services </span>
             </h2>
 
-            <ul class="services-list">
+            <ul class="services-list" data-aos="fade-up">
                 <li class="services-item">
 
                     <div class="service-title">
@@ -124,12 +128,12 @@
         </section>
 
         <section id="about" class="section-padding">
-            <div class="about-img">
+            <div class="about-img" data-aos="fade-right">
                 <img src="assets/img/about.jpg" alt="About">
                 <img src="assets/img/about3.jpeg" alt="Us">
             </div>
 
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-left">
                 <h2 class="section-title">
                     <span class="underline"> About Us </span>
                 </h2>
@@ -145,7 +149,11 @@
                     cum eveniet fugiat, illo est error earum magnam velit. </p>
 
                 <h3> Our Mission </h3>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum hic quam illum fuga aspernatur, dicta cumque reprehenderit esse blanditiis illo dignissimos incidunt vero velit unde sapiente mollitia commodi nostrum! Vero, repudiandae eaque? Accusantium accusamus, nam provident architecto perferendis ipsa ab minima quidem commodi nulla nesciunt cumque fugiat adipisci repellat. </p>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit earum hic quam illum fuga
+                    aspernatur, dicta cumque reprehenderit esse blanditiis illo dignissimos incidunt vero velit unde
+                    sapiente mollitia commodi nostrum! Vero, repudiandae eaque? Accusantium accusamus, nam provident
+                    architecto perferendis ipsa ab minima quidem commodi nulla nesciunt cumque fugiat adipisci repellat.
+                </p>
             </div>
         </section>
 
@@ -191,7 +199,7 @@
         </section>
 
         <section id="contact" class="section-padding">
-            <div class="contact-info">
+            <div class="contact-info" data-aos="fade-left">
                 <h2 class="section-title">
                     <span class="underline"> Contact </span>
                 </h2>
@@ -228,7 +236,7 @@
                 </div>
             </div>
 
-            <form id="contact-form">
+            <form id="contact-form" data-aos="fade-right">
                 <input type="text" name="name" placeholder="Name">
                 <input type="email" name="email" placeholder="Email">
                 <input type="text" name="phone" placeholder="Phone number">
@@ -258,6 +266,12 @@
         </p>
     </footer>
 
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <!-- JS -->
     <script src="assets/js/main.js"></script>
