@@ -15,7 +15,7 @@ body {
 }
 
 .section-padding {
-    padding: 75px 10%;
+    padding: calc(50px + $navbar-height) 10%;
 }
 
 li {
@@ -37,7 +37,7 @@ h3 {
 }
 
 .section-title {
-    margin-bottom: 45px;
+    margin-bottom: 60px;
 }
 
 @include underline($font-color-main);

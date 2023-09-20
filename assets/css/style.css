@@ -16,7 +16,7 @@ body {
 }
 
 .section-padding {
-  padding: 75px 10%;
+  padding: 135px 10%;
 }
 
 li {
@@ -46,7 +46,7 @@ h3 {
 }
 
 .section-title {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 }
 
 .underline {
@@ -239,7 +239,6 @@ header a {
 }
 #services h2 {
   text-align: center;
-  margin-bottom: 55px;
 }
 
 .services-list {
@@ -352,8 +351,8 @@ header a {
   background-color: rgb(97, 96, 96);
 }
 #team .section-title {
-  margin: auto;
-  margin-bottom: 45px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
 }
 
@@ -416,7 +415,6 @@ header a {
   align-items: start;
   gap: 30px;
   background-color: rgb(168, 0, 0);
-  padding: 75px 10%;
 }
 #contact form {
   flex: 1;

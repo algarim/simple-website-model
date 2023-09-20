@@ -21,7 +21,9 @@ const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
     let currentScrollY = window.scrollY;
 
+    if(window.innerWidth < 1280) {
     header.style.top = (currentScrollY > prevScrollY) ? '-100%' : '0';
+    }
 
     prevScrollY = currentScrollY;
 });
