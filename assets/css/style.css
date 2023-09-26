@@ -13,6 +13,7 @@ body {
   height: 100%;
   background-color: black;
   overflow-x: hidden;
+  font-family: Helvetica;
 }
 
 .section-padding {
@@ -429,6 +430,7 @@ header a {
   font-weight: normal;
   font-style: normal;
   color: white;
+  color: black;
 }
 #contact form textarea {
   padding: 8px 10px;
@@ -438,12 +440,25 @@ header a {
   font-style: normal;
   color: white;
   margin-bottom: 10px;
+  color: black;
+  line-height: 1.5;
 }
 #contact .form-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+#contact .form-input.empty {
+  border: 2px solid red;
+  background-color: rgb(253, 224, 224);
+}
+#contact .form-error {
+  display: none;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  font-style: italic;
 }
 
 .contact-info {

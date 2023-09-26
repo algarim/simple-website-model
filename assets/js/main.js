@@ -21,8 +21,8 @@ const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
     let currentScrollY = window.scrollY;
 
-    if(window.innerWidth < 1280) {
-    header.style.top = (currentScrollY > prevScrollY) ? '-100%' : '0';
+    if (window.innerWidth < 1280) {
+        header.style.top = (currentScrollY > prevScrollY) ? '-100%' : '0';
     }
 
     prevScrollY = currentScrollY;
@@ -35,7 +35,6 @@ const navLinks = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     sections.forEach((section, index) => {
-        console.log(index);
         const sectionTop = section.offsetTop;
         const sectionBottom = sectionTop + section.offsetHeight;
 
@@ -47,6 +46,7 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
 
 // SERVICES TABS
 
@@ -62,4 +62,48 @@ serviceItems.forEach(service => {
 
         description.classList.toggle("active");
     })
-})
+});
+
+
+// EMAIL JS
+
+const form = document.getElementById('contact-form');
+const inputs = document.querySelectorAll('.form-input');
+const error = document.querySelector(".form-error")
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    let emptyFields = 0;
+
+    for (let i = 1; i < inputs.length; i++) {
+        if (inputs[i].value.trim().length === 0) {
+            inputs[i].classList.add("empty");
+            emptyFields++;
+            error.style.display = "block";
+        } else {
+            inputs[i].classList.remove("empty");
+        }
+    };
+
+    if (emptyFields === 0) {
+        error.style.display = "none";
+
+        form.contact_number.value = Math.random() * 100000 | 0;
+        emailjs.sendForm('contact_service', 'contact_form', form)
+            .then(() => {
+                console.log('Contact form sent successfully!');
+
+                Swal.fire(
+                    'Success!',
+                    'Contact form sent',
+                    'success'
+                );
+                form.reset();
+                
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+            });
+    }
+});

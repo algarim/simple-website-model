@@ -8,6 +8,14 @@
     <!-- ICONS -->
     <script src="https://kit.fontawesome.com/e2a6947e79.js" crossorigin="anonymous"></script>
 
+    <!-- EMAIL JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('sb4nRw0xFvgNnnKQd');
+        })();
+    </script>
+
     <!-- ANIMATIONS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -237,16 +245,20 @@
             </div>
 
             <form id="contact-form" data-aos="fade-right">
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email">
-                <input type="text" name="phone" placeholder="Phone number">
-                <textarea name="message" rows="10" placeholder="Leave your message"></textarea>
+                <input type="hidden" name="contact_number" class="form-input">
+                <input type="text" name="name" placeholder="Name" class="form-input">
+                <input type="email" name="email" placeholder="Email" class="form-input">
+                <input type="text" name="phone" placeholder="Phone number" class="form-input">
+                <textarea name="message" rows="7" placeholder="Leave your message" class="form-input"></textarea>
+
+                <p class="form-error"> Some fields are empty </p>
 
                 <div class="form-buttons">
-                    <button type="submit"> Send </button>
-                    <button type="reset"> Clear form</button>
+                    <button type="submit" id="contact-form-submit"> Send </button>
+                    <button type="reset"> Clear form </button>
                 </div>
             </form>
+
         </section>
     </main>
 
@@ -280,6 +292,9 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- SWEET ALERT -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- JS -->
     <script src="assets/js/main.js"></script>
